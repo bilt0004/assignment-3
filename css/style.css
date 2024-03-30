@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
@@ -76,6 +77,7 @@ header div {
 
 #services .wrapper {
     padding: 0 2em;
+    /* background-color: #fafafa; */
     background-color: #fafafa;
     display: grid;
 }
@@ -83,10 +85,71 @@ header div {
 .articles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    /* top, r&l bottom */
+    padding: 2em 1em 3em;
+}
+
+.articles article {
     background-color: #fff;
+    /* top, r&l bottom */
+    padding: 0 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .btn {
-    margin: auto;
+    background-color: #000;
+    border-style: solid;
+    border-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: auto;
 }
 
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+    border-style: solid;
+    border-color: #000;
+}
+
+#work .wrapper {
+    padding: 0 2em;
+
+}
+
+#work h2, #work p {
+    text-align: center;
+    /* max-width: ; */
+}
+
+.works {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.block {
+    width: 100%;
+}
+
+.block :nth-child(1),
+.block :nth-child(2) {
+    grid-column: 1;
+}
+
+.block :nth-child(3),
+.block :nth-child(4),
+.block :nth-child(5) {
+    grid-column: 2;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
