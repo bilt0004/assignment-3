@@ -5,6 +5,7 @@
 
 body {
     margin: 0;
+    font-size: 0.75rem;
 }
 
 header {
@@ -63,22 +64,26 @@ header div {
 
 #about-me .wrapper {
     padding: 0 2em;
-    display: flex;
-    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
 }
 
 #about-me img {
-    width: 30%;
+    width: 100%;
 }
 
 #services h2 {
     text-align: center;
 }
 
-#services .wrapper {
-    padding: 0 2em;
+#services {
+    padding: 2em 0;
     /* background-color: #fafafa; */
     background-color: #fafafa;
+}
+
+#services .wrapper {
     display: grid;
 }
 
@@ -147,9 +152,43 @@ header div {
     grid-column: 2;
 }
 
+.gallery{
+    padding: 0 1em;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "div1 div1 div1 div2 div2 div2"
+    "div1 div1 div1 div2 div2 div2"
+    "div3 div3 div4 div4 div5 div5"
+    "div3 div3 div4 div4 div5 div5"
+    ;
+}
+
+.gallery .block:nth-child(1) {
+    grid-area: div1;
+}
+
+.gallery .block:nth-child(2) {
+    grid-area: div2;
+}
+
+.gallery .block:nth-child(3) {
+    grid-area: div3;
+}
+
+.gallery .block:nth-child(4) {
+    grid-area: div4;
+}
+
+.gallery .block:nth-child(5) {
+    grid-area: div5;
+}
+
 footer {
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 1em;
+    padding: 1em 0;
+    margin-top: 5em;
 }
